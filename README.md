@@ -2,6 +2,7 @@
 
 1. Fetch Weather Data:
 - Use the PirateWeather API (https://api.pirateweather.net) to fetch weather data based on user latitude and longitude.
+- Use geo ip to fetch coordinates.
 - Display current weather:
   - Temperature (°C).
   - Weather summary (e.g. Overcast, Clear, Rainy).

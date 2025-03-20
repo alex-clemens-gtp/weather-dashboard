@@ -11,7 +11,7 @@ export default function Forecast7Days({ weather }: { weather: any }) {
                 <p>{new Date(day.time * 1000).toDateString()}</p>
                 <hr />
                 <p>
-                  {day.temperatureHigh}°C / {day.temperatureLow}°C
+                  {day.temperatureHigh}°F / {day.temperatureLow}°F
                 </p>
                 <img
                   src={getIconName(day.icon, "/icons/")}

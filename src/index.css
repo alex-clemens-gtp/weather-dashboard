@@ -74,20 +74,17 @@ h1,
 h2 {
   text-align: center;
 }
-
 .current {
   text-align: center;
   border: solid 1px #ddd;
   padding: 1rem;
   border-radius: 8px;
 }
-
 .forecast {
   border-radius: 8px;
   border: 1px solid #ddd;
   overflow-x: scroll;
 }
-
 table {
   margin: 0 auto;
   border-collapse: collapse;
@@ -96,17 +93,23 @@ table {
   max-width: 600px;
   text-align: center;
 }
-
 td {
   padding: 0.5rem;
   white-space: nowrap;
 }
-
 td:not(:last-child) {
   border-right: 1px solid #ddd;
 }
-
 hr {
   margin: 2rem 0;
   border-top: 1px solid #ddd;
+}
+.error {
+  color: red;
+}
+
+.city-search {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
 }

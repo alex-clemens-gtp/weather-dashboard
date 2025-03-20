@@ -8,7 +8,7 @@ export default function CitySearch({
 }: {
   onCoordinatesChange: (lat: number, lon: number, city: string) => void;
 }) {
-  const [city, setCity] = useState("");
+  const [city] = useState("");
   const [error, setError] = useState("");
 
   const fetchCoordinates = async () => {
@@ -28,13 +28,18 @@ export default function CitySearch({
     }
   };
 
+  const handleKeyUp = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter") {
+      fetchCoordinates();
+    }
+  };
+
   return (
     <div className="city-search">
       <input
         type="text"
-        value={city}
-        onChange={(e) => setCity(e.target.value)}
         placeholder="Enter city name"
+        onKeyUp={handleKeyUp}
       />
       <button onClick={fetchCoordinates}>Get Weather</button>
       {error && <p className="error">{error}</p>}
