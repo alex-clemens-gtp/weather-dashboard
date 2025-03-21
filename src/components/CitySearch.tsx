@@ -8,7 +8,7 @@ export default function CitySearch({
 }: {
   onCoordinatesChange: (lat: number, lon: number, city: string) => void;
 }) {
-  const [city] = useState("");
+  const [city, setCity] = useState("");
   const [error, setError] = useState("");
 
   const fetchCoordinates = async () => {
@@ -40,6 +40,7 @@ export default function CitySearch({
         type="text"
         placeholder="Enter city name"
         onKeyUp={handleKeyUp}
+        onChange={(e) => setCity(e.target.value)}
       />
       <button onClick={fetchCoordinates}>Get Weather</button>
       {error && <p className="error">{error}</p>}
